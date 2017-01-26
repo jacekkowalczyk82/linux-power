@@ -107,7 +107,8 @@ $ sudo mkdir -p /d/docker/debian-workspace
 $ sudo chown -R kowalczy:kowalczy /d/
 $ sudo chmod -R 777 /d/
 $ sudo mount -t vboxsf /d/docker/debian-workspace /d/docker/debian-workspace/
-$ df -h
+$ ln -s /d/docker/debian-workspace/ ~/workspace
+$ df -h 
 
 ```
 
