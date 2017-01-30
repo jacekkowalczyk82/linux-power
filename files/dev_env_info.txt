@@ -1,0 +1,19 @@
+To start terminal 
+
+    cd /home/developer
+    nohup terminator & 
+
+To start emacs editor 
+
+    cd ~/
+    nohup emacs  &
+
+To start eclipse
+    chmod 755  /home/developer/eclipse/eclipse
+    cd /home/developer/eclipse
+    chown -R developer:developer /home/developer
+    /home/developer/eclipse/eclipse  |tee eclipse-docker.log 
+	
+	
+
+

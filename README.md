@@ -98,7 +98,7 @@ $ sudo mount /media/cdrom
 
 |x |mount point|windows path|
 |--|-----------|------------|
-|  |'/d/docker/debian-workspace' |'d:\docker\debian-workspace\'|
+|  |'/d/docker/debian-workspace' |'d:\docker\debian-workspace'|
 
 * mount
 
@@ -108,7 +108,7 @@ $ sudo chown -R kowalczy:kowalczy /d/
 $ sudo chmod -R 777 /d/
 $ sudo mount -t vboxsf /d/docker/debian-workspace /d/docker/debian-workspace/
 $ ln -s /d/docker/debian-workspace/ ~/workspace
-$ df -h 
+$ df -h
 
 ```
 
@@ -149,3 +149,10 @@ $ screenfetch -D 'Debian'
 
 
 ```
+
+
+* build 
+  use `./build.sh` as it will download eclipse package to be installed inside docker 
+  `docker build -t docker-dev-env .`
+* run
+  `docker run -i -t -p 1234:1234 -p 9191:9191 --net=host -v /d/docker/debian-workspace:/home/developer/debian-workspace docker-dev-env-debian`
